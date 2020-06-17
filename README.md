@@ -10,4 +10,6 @@
 
 ## Links:
 ### Link to deployed application:
-* 
+* https://jenlpac.github.io/password-generator/
+### Link to Github repository:
+* https://github.com/jenlpac/password-generator
