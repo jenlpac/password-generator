@@ -34,6 +34,32 @@ var generatePassword = function() {
         alert("Please select at least one character type.");
         return charType();
       }
+
+      // Use selected characters and length to make a password
+      // Start with a password variable that is blank, add selected characters with if statements
+      var mkPassword = "";
+
+      if(lowerCaseConfirm) {
+        mkPassword += lowerCase;
+      }
+
+      if(upperCaseConfirm) {
+        mkPassword += upperCase;
+      }
+
+      if(numConfirm) {
+        mkPassword += numOptions;
+      }
+
+      if(specialConfirm) {
+        mkPassword += specialChars;
+      }
+
+      // Use for loop to add characters up to selected length
+      for (i= 0; i < passwordLength; i++) {
+        password += mkPassword[Math.floor(Math.random() * mkPassword.length)];
+      }
+      console.log (password);
     }
   charType();
   }
@@ -41,7 +67,7 @@ var generatePassword = function() {
     alert("Please select a valid password length.");
     return generatePassword();
   }
-
+return password;
 
 }
 
