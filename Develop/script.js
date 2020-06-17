@@ -2,32 +2,36 @@
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numOptions = "0123456789";
-var specialChars = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~\"\\";
+var specialChars = " !#$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Define generatePassword function
 var generatePassword = function() {
+  var password = "";
   var passwordLength = prompt("How long would you like your password to be? Select 8 to 128 characters.");
+
+  // Allow user to cancel
+  if(passwordLength === null) {
+    return;
+  }
   // Convert to integer
   passwordLength = parseInt(passwordLength);
-  console.log (passwordLength);
-
-
+  
   // Ensure length selection is within defined terms
   if(passwordLength >= 8 && passwordLength <= 128) {
 
     // Create function to call if character type selections are not valid
     var charType = function() {
       var lowerCaseConfirm = confirm("Would you like lowercase characters in your password?");
-      console.log (lowerCaseConfirm);
+      
       var upperCaseConfirm = confirm("Would you like uppercase characters in your password?");
-      console.log (upperCaseConfirm);
+      
       var numConfirm = confirm("Would you like numbers in your password?");
-      console.log (numConfirm);
+      
       var specialConfirm = confirm("Would you like special characters in your password?");
-      console.log (specialConfirm);
+      
       
       // Ensure at least one character type is selected
       if(!lowerCaseConfirm && !upperCaseConfirm && !numConfirm && !specialConfirm) {
@@ -67,7 +71,8 @@ var generatePassword = function() {
     alert("Please select a valid password length.");
     return generatePassword();
   }
-return password;
+
+  return password;
 
 }
 
