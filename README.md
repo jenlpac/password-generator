@@ -6,7 +6,7 @@
 * Generated a password based on selected criteria
 
 ## Screenshot:
-![Screenshot](./Develop/images/screenshot.jpg)
+![Screenshot](./assets/images/screenshot.jpg)
 
 ## Links:
 ### Link to deployed application:
