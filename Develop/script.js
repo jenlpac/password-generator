@@ -59,7 +59,7 @@ var generatePassword = function() {
       for (i= 0; i < passwordLength; i++) {
         password += mkPassword[Math.floor(Math.random() * mkPassword.length)];
       }
-      console.log (password);
+
     }
   charType();
   }
